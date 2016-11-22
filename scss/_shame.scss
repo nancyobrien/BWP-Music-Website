@@ -1,0 +1,216 @@
+// =============================================================================
+// SHAME SHAME SHAME
+// this is only for temporary quick hacks. 
+// Go fix it where it belongs
+// you naughty developer.
+// =============================================================================
+
+ 
+$maxWidth:1280px;
+* { 
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+
+
+button {
+    &:focus{
+        outline: none;
+    }
+}
+
+.hidden{
+    display:none;
+}
+
+.l-content-container {
+    width: 100%;
+    height:100%;
+}
+.l-content {
+    padding:0;
+    margin: 0 auto;
+    width: 100%;
+    height:100%;
+}
+.content {
+    position: relative;
+    padding: 0;
+    max-width: $maxWidth; 
+    width: 100%;
+    height:100%;
+    margin:0 auto;
+
+}
+
+
+.interaction-container{
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:transparent;
+    height:100%;
+    width:100%;
+    z-index: 100;
+
+    .interaction-elements {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        .road { 
+            width:100%;
+            height:100%;
+            position: relative; 
+            pointer-events: none;
+
+
+            -webkit-user-select: none;
+            -moz-user-select: -moz-none;
+            /*IE10*/
+            -ms-user-select: none;
+            user-select: none;
+
+            /*You just need this if you are only concerned with android and not desktop browsers.*/
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+
+        }
+
+
+
+        .slider { 
+            height: 100%; 
+        }
+
+        .sliderbar {
+            input {
+                display: none;
+            }
+        }
+
+        .dragger {
+            cursor: pointer;
+            -ms-touch-action: none;
+            touch-action: none;
+            background-repeat: no-repeat;
+            transform:translate(-30%, 0);
+            border: none;
+            background-color: transparent;
+            background-size: cover;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .track {
+            cursor: pointer;
+           // background-size: cover;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            width: 100%;
+            border: none;
+        }
+
+
+
+        .element {
+            height:100px;
+            width:auto;
+            display:inline-block;
+            position: absolute;
+            z-index: 0;
+
+            &.tooltip-display{
+                display:none;
+                cursor: pointer;
+                opacity: .9;
+            }
+
+            &.confirm-msg {
+                display:none;
+                cursor: pointer;
+            }
+
+            &.clickable{
+                cursor: pointer;
+                &.disabled {
+                    cursor: default;
+                    opacity: .4;
+                }
+            }
+ 
+
+            &.tooltip{
+                cursor: help;
+                &.disabled {
+                    cursor: default;
+                }
+            }
+
+            &.draggableElement {
+                cursor: grab;
+                cursor: -webkit-grab;
+            }
+
+            &.drag-show {
+                img {display:none;}
+                background: transparent;
+                background-size: contain;
+            }
+
+            &.ui-draggable-disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+
+
+            img {
+                height: 100%;
+                width: 100%;
+                display: block;
+            }
+
+            &.wiping {
+                overflow: hidden;
+                img {
+                    width: auto;
+                    height: auto;
+                }
+
+                &.reverse {
+                    img {
+                        position: absolute;
+                        right: 0;
+                    }
+                    &.vertical {
+                        img {
+                            right: auto;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &#interaction-transition{
+        background-color: transparent;
+        left:500px;
+        z-index:5;
+
+    }
+
+    &#interaction-container2{
+         background-color: transparent;
+        left:1500px;
+        z-index:0;
+       
+    }
+} 
+

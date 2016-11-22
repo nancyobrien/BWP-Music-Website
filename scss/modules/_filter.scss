@@ -1,0 +1,41 @@
+.filters {
+	display: block;
+
+	@include at-breakpoint (960px 12) {
+		display: inline-block;
+		float: right;
+	}
+}
+.title--filter {
+	font-size: .8rem;
+	margin-right: .5rem;
+	display: block;
+	@include at-breakpoint (450px 12) {
+		display: inline;
+	}
+}
+
+.button--filter {
+	color: $color-primary;
+	text-decoration: none;
+	padding: .5em 1em;
+	font-size: 0.6rem;
+	border-bottom: thin dotted $color-primary;
+
+	@include at-breakpoint (350px 12) {
+		font-size: 0.7rem;
+	}
+
+	&:hover {
+		background-color: $color-subtle;
+	}
+
+	&.selected {
+		color: #fff;
+		background-color: $color-primary;
+		&:hover {
+			background-color: $color-primary;
+		}
+	}
+}
+

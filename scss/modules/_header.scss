@@ -1,0 +1,30 @@
+
+// =============================================================================
+// Header
+// =============================================================================
+
+.header{
+	background-color:$color-alt1;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	z-index:999;
+	height:57px;
+	@include at-breakpoint(800px 12) {
+		height:auto;
+	}
+	.ltie9 &{
+		height:auto;
+	}
+}
+
+
+// Sub Classes
+
+.header--transparent{
+	background-color:rgba($color-alt1, 0.82);
+}
+
+// States
+

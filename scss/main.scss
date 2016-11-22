@@ -1,0 +1,37 @@
+// =============================================================================
+// Third-party -- don't directly modify these files.
+// =============================================================================
+@import "compass";
+@import "vendor/susy"; // https://github.com/ericam/susy/archive/master.zip
+@import "vendor/modular-scale"; // https://github.com/Team-Sass/modular-scale/archive/2.x.zip
+
+
+// =============================================================================
+// Base settings & styles
+// =============================================================================
+@import "base/settings";
+@import "base/mixins";
+@import "base/fonts";
+@import "base/normalize"; // https://github.com/kristerkari/normalize.scss
+@import "base/typography";
+@import "base/base";
+@import "base/layout";
+
+
+// =============================================================================
+// Modules
+// =============================================================================
+@import "modules/all";
+// ...
+
+
+// =============================================================================
+// Shame on you!!!! Only put code here temporarily.
+// =============================================================================
+
+@import "shame"; 
+@import "instance"; 
+@import "icomoon"; 
+@import "ie8"; 
+
+//don't put any other sass here... keep this file clean

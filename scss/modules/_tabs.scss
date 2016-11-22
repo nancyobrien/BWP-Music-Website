@@ -1,0 +1,53 @@
+
+ul.tabList{
+	clear:both;
+	width:100%;
+	padding-top:1em;
+    display: table;
+    list-style: none outside none;
+    margin: 0 0 -1px;
+    padding: 0;
+    margin-left: 0 !important;
+    position: relative;
+    z-index: 99;
+     background-color: #F4F4F4;
+     border-bottom: 4px solid $color-primary;
+     margin-top:2em;
+
+    li{
+        cursor: pointer;
+        background-color: #F4F4F4;
+        border-color: #DDDDDD #DDDDDD;
+        border-image: none;
+        border-style: solid;
+        border-width: 1px;
+        float: left;
+        
+        a{
+        	display:block;
+        	float:left;
+        	text-decoration:none;
+        	padding: 12px 24px;
+        }
+	    &.current{
+            background-color: $color-primary;
+            border-color: $color-primary;
+            color: #FFFFFF;
+            pointer-events: none;
+            a {
+            	text-decoration:none;
+                color:white;
+                &:focus{
+                                outline:0;
+                }
+            }
+        }
+         
+	}
+	&:after, &:before {
+      content: "";
+      display: table;
+    }
+}
+
+

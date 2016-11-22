@@ -1,0 +1,198 @@
+
+.ltie9 {
+	.l-content {
+		padding-top: 0;
+		width: 960px;
+	}
+
+	.mute-container{
+	    #mute {
+		    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/mute-on.png', sizingMethod='scale');       
+	        background: none;
+	        &.paused{
+        	    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/mute-off.png', sizingMethod='scale');       
+                background: none;
+	        }
+	    }
+
+	}
+
+
+
+    .interaction-container .interaction-elements {
+    	 .element {
+    	 	&.clickable{
+    	 	    &.disabled {
+    	 	        filter: alpha(opacity=40);
+    	 	    }
+    	 	}
+
+		    &.age{
+		    	height: 21px;
+		    	width: 21px;
+		        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/scene-03/1.png', sizingMethod='scale');       
+		        background: none;
+
+		        &.selected{
+		        	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/scene-03/2.png', sizingMethod='scale');       
+		        	background: none;
+		       }
+		    }
+
+		    &.age-image{
+		       	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/scene-03/age-pict.png', sizingMethod='scale');  
+		       	background: none;     
+
+		        &.female{
+		            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/w30.png', sizingMethod='scale');  
+		            background: none;     
+		            &.age-40{
+		            	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/w31-40.png', sizingMethod='scale');       
+		            	background: none;
+		            }
+		            &.age-50{
+		            	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/w41-50.png', sizingMethod='scale');       
+		            	background: none;
+		            }
+		            &.age-51{
+		            	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/w51.png', sizingMethod='scale');       
+		            	background: none;
+		            }
+		        }
+		        &.male{
+		       		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/m30.png', sizingMethod='scale');       
+		       		background: none;
+		            &.age-40{
+		       			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/m31-40.png', sizingMethod='scale');       
+		       			background: none;
+		            }
+		            &.age-50{
+		       			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/m41-50.png', sizingMethod='scale');       
+		       			background: none;
+		            }
+		            &.age-51{
+		       			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/m51.png', sizingMethod='scale');       
+		       			background: none;
+		            }
+		        }
+
+		    }
+		    &.result-provider-graphic{
+       			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/scene-14/chp.png', sizingMethod='scale');       
+		        background: none;
+		        &.PPO{
+		            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/scene-14/ppo.png', sizingMethod='scale');       
+		        	background: none;
+		        }
+		    }
+
+		    &.result-provider-text{
+		        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/scene-14/chp-text.png', sizingMethod='scale');       
+		        background: none;
+		        &.PPO{
+		        	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/scene-14/ppo-text.png', sizingMethod='scale');       
+		        	background: none;
+		        }
+		    }
+	    }
+    }
+
+
+    .sidebar{
+        background: transparent url("/images/elements/sidebar/sidebar-background.png") repeat;
+
+        .about-container {
+            .about-you{
+            	height:23px;
+            	width: 98px;
+                background: none;
+                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/0.png', sizingMethod='scale');       
+
+            }
+        }
+
+        .back-container {
+            .back-button{
+            	height:43px;
+            	width: 129px;
+            	background: none;
+                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/back.png', sizingMethod='scale');       
+            }
+
+        }
+
+
+        .coverage-container{
+            .coverage-text {
+            	height:55px;
+            	width: 129px;
+            	margin-top:0;
+
+                background: none;
+                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/coverage-block.png', sizingMethod='scale');       
+
+                .coverage-avatar{
+                    background: none;
+                    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/coverage-single.png', sizingMethod='scale');       
+
+                    &.plus-one {
+	                    background: none;
+	                    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/coverage-married.png', sizingMethod='scale');       
+                    }
+
+                    &.plus-kids{
+	                    background: none;
+	                    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/coverage-kids.png', sizingMethod='scale');       
+                    }
+
+                    &.plus-family{
+	                    background: none;
+	                    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/coverage-family.png', sizingMethod='scale');       
+                    }
+                }
+            }
+        }
+
+        .avatar {
+        	height:129px;
+        	width: 129px;
+
+            background: none;
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/blank-profile.png', sizingMethod='scale');       
+            &.female{
+                background: none;
+                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/w30.png', sizingMethod='scale');       
+                &.age-40{
+	                background: none;
+	                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/w31-40.png', sizingMethod='scale');       
+                }
+                &.age-50{
+	                background: none;
+	                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/w41-50.png', sizingMethod='scale');       
+                }
+                &.age-51{
+	                background: none;
+	                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/w51.png', sizingMethod='scale');       
+                }
+            }
+            &.male{
+                background: none;
+                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/m30.png', sizingMethod='scale');       
+                &.age-40{
+	                background: none;
+	                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/m31-40.png', sizingMethod='scale');       
+                }
+                &.age-50{
+	                background: none;
+	                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/m41-50.png', sizingMethod='scale');       
+                }
+                &.age-51{
+	                background: none;
+	                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/elements/sidebar/m51.png', sizingMethod='scale');       
+                }
+            }
+        }
+    }
+
+
+}

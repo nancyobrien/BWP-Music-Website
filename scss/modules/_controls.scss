@@ -1,0 +1,164 @@
+
+.controls {
+	font-weight: bold;
+	padding: 1em;
+	border: 1px solid $color-secondary;
+
+	/* input {
+		margin-left: 1em;
+		width: 30%;
+		min-width: 200px;
+	} */
+
+
+	label {
+		display: block;
+		@include at-breakpoint(800px 12) {
+			display: inline;
+		}
+	}
+
+	input {
+		display: inline-block;
+		margin: .5em 0;
+		width: 90%;
+		@include at-breakpoint(800px 12) {
+			margin-left: 1em;
+			width: 30%;
+			min-width: 200px;
+		}
+	}
+
+	.clear-input {
+		text-decoration: none;
+		color: #aaa;
+		font-size: 1.3em;
+		line-height: 0.9em;
+		margin: 0;
+		padding: 0;
+		display: inline-block;
+		position: relative;
+		margin-left: -1.1em;
+		top: 0.15em;
+		&:hover {
+			color: #666;
+		}
+		&:before {
+			font-family: 'icomoon';
+			content: "\e908";
+		} 
+		&:focus, &:active {
+			outline: none;
+		}
+	}
+
+
+	.button--randomize {
+		background-color: $color-primary;
+		color: white;
+		text-decoration: none;
+		padding: .5em 2em;
+		border: thin solid $color-primary;
+		display: inline-block;
+
+		span {
+			font-weight: normal;
+			margin-right: .3em;
+			&.icon-dice-single {
+				&:before {
+					display: inline-block;
+				}
+			}
+		}
+		&.processing {
+			cursor: default;
+			.icon-dice-single {
+				&:before {
+					animation: spin .75s infinite;
+				}
+			}
+		}
+		&:hover {
+			border: thin dotted white;
+		}
+	}
+
+	.button--download {
+		background-color: $color-primary;
+		color: white;
+		text-decoration: none;
+		padding: .5em 2em;
+		border: thin solid $color-primary;
+		display: inline-block;
+		overflow: hidden;
+		
+
+		span {
+			font-weight: normal;
+
+			&.icon-arrow-down {
+				margin-right: .3em;
+				&:before {
+					display: inline-block;
+					position: relative;
+				}
+			}
+		}
+		&.processing {
+			cursor: default;
+			.icon-arrow-down {
+				&:before {
+					-webkit-animation: movedown .8s steps(10) infinite;
+					       -moz-animation: movedown .8s steps(10) infinite;
+					        -ms-animation: movedown .8s steps(10) infinite;
+					         -o-animation: movedown .8s steps(10) infinite;
+					            animation: movedown .8s steps(10) infinite;
+				}
+			}
+		}
+		&:hover {
+			border: thin dotted white;
+		}
+	}
+
+}
+
+
+@-moz-keyframes spin {
+    0% { -moz-transform: rotate(0deg); }
+    100% { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+
+
+@-webkit-keyframes movedown {
+   from { top: -50px; }
+     to { top: 100px; }
+}
+
+@-moz-keyframes movedown {
+   from { top: -50px; }
+     to { top: 100px; }
+}
+
+@-ms-keyframes movedown {
+   from { top: -50px; }
+     to { top: 100px; }
+}
+
+@-o-keyframes movedown {
+   from { top: -50px; }
+     to { top: 100px; }
+}
+
+@keyframes movedown {
+   from { top: -50px; }
+     to { top: 100px; }
+}

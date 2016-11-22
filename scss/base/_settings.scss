@@ -1,0 +1,127 @@
+// =============================================================================
+// Settings
+// =============================================================================
+
+$border-radius:16px;
+$border-radius-medium:8px;
+$border-radius-small:4px;
+
+$color-primary:#F15B41;  //orange
+$color-darktext:#666;  //dark gray
+$color-secondary:#cccccc;  //orange
+$color-meddark:#9e9e9e;  //orange
+$color-alt1: #3db0b7; //teal
+$color-alt2: #97c93c; //lime
+$color-alt3: #faa51a; //orange
+$color-alt4: #ed1c24; //red
+$color-subtle: #f1f1f1; //light gray
+
+$color-primary-light:#dadfef;  //darkblue, 20%
+$color-alt1-light:#d2edee; //teal, 20%
+$color-alt2-light:#eaf4d8; //lime, 20%
+$color-alt3-light:#feedd1; //orange, 20%
+$color-alt4-light:#fbd2d3; //red, 20%
+
+// =============================================================================
+// Normalize.scss settings
+// =============================================================================
+
+
+// Set to true if you want to add support for IE6 and IE7
+// Notice: setting to true might render some elements
+// slightly differently than when set to false
+$legacy_support_for_ie: false !default; // Used also in Compass
+
+
+// Set the default font family here so you don't have to override it later
+$normalized_font_family: sans-serif !default;
+
+//set to false to ignore normalize's heading sizes
+$normalize_headings: false !default;
+
+$h1_font_size: 2em !default;
+$h2_font_size: 1.5em !default;
+$h3_font_size: 1.17em !default;
+$h4_font_size: 1em !default;
+$h5_font_size: 0.83em !default;
+$h6_font_size: 0.75em !default;
+
+$h1_margin: 0.67em 0 !default;
+$h2_margin: 0.83em 0 !default;
+$h3_margin: 1em 0 !default;
+$h4_margin: 1.33em 0 !default;
+$h5_margin: 1.67em 0 !default;
+$h6_margin: 2.33em 0 !default;
+
+$background: #fff !default;
+$color: #000 !default;
+
+// =============================================================================
+// modular-scale.scss settings
+// =============================================================================
+
+// 1st number sets base size, 2nd number represents an important size in your design
+// in this case 1em = 60px, 60em is 960px in ems.
+// 2nd number is optional
+$ms-base: 1em 60em; 
+// sets ratio, valid values are here > https://github.com/Team-Sass/modular-scale
+$ms-ratio: $golden; 
+
+// =============================================================================
+// typography.scss settings
+// =============================================================================
+
+$text-color: #414141;
+$quiet-color: #ccc;
+$loud-color: #000;
+$heading-color: #111;
+
+$link-color: #d54aaf;
+$link-hover-color: saturate(#d54aaf, 20%);
+$link-visited-color: purple;
+
+$base-font-family: Helvetica, Arial, sans-serif; //web fonts are declared in base/_fonts.scss /*'HelveticaNeueLTStd-Roman', */ 
+$base-font-size: ms(0); // use modular scale starting with $ms-base as base size
+$base-font-weight: 300;
+$base-line-height: ms(0) * 1.6; //use modular scale to arrive at line-height
+
+$small-mobile-font-size: 0.8em;
+
+
+$heading-font-family: Helvetica, Arial, sans-serif; //web fonts are declared in base/_fonts.scss
+$heading-font-weight: 300;
+
+$fixed-font-family: 'droid_sans_monoregular', monospace; //web fonts are declared in base/_fonts.scss
+$fixed-font-size: ms(0, 15px); //use modular scale starting with 15px as base size
+$fixed-line-height: ms(0, 15px) * 1.2; //use modular scale to arrive at line-height
+
+// =============================================================================
+// susy.scss settings
+// =============================================================================
+
+$total-columns  : 12;
+$column-width   : 10em;
+$gutter-width   : 1em;
+$grid-padding   : $gutter-width;
+
+$mobile-header-height: 3.58em;
+$header-height: 5em;
+
+//susy breakpoints
+$break          : 12;
+
+// =============================================================================
+// sassy-button-settings
+// =============================================================================
+
+$sb-base-color: #0bc265;		// Base color of your button
+$sb-second-color: false;		// Optional second color of button gradient
+$sb-border-radius: 10px;		// Button border radius
+$sb-border-width: 1px;			// Button border width
+$sb-padding: 0.5em 1.5em;		// Button padding
+$sb-font-size: 20px;			// Button font-size
+$sb-line-height: 1.2em;			// Button line-height
+$sb-text-color: white;			// Button text color
+$sb-text-style: "inset";		// Button text shadow style (values: none, inset, raised)
+$sb-gradient-style: "matte";	// Button gradient style
+$sb-auto-states: true;			// Automatically create pseudo styles 

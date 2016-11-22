@@ -1,0 +1,158 @@
+// =============================================================================
+// Banner
+// =============================================================================
+
+.banner{
+	
+}
+
+
+
+
+// Sub Classes
+
+
+
+// States
+
+
+// =============================================================================
+// Children (that are not separate modules)
+// =============================================================================
+
+.banner_image{
+	position: absolute;
+	display: block;
+	left: -100%;
+	right:-100%;
+	max-width:826px;
+	margin:0 auto;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	@include at-breakpoint(800px 12){
+		left: 0;
+		right: 0;
+		max-width: 100%;
+		max-height: 100%;
+
+	}
+	@include at-breakpoint(960px 12){
+		
+	}
+	@include at-breakpoint(1200px 12){
+
+	}
+	.ltie9 &{
+		left: 0;
+		right: 0;
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+}
+.banner_overlay{
+	position:absolute;
+	z-index:900;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	padding-left:1em;
+	padding-top:15%;
+	padding-bottom:20em;
+	padding-right:45%;
+	background: transparent url(/images/banner-text-overlay.png) 0 50% no-repeat;
+	background-size:150% 100%;
+	@include at-breakpoint(800px 12){
+		padding-left:1em;
+		padding-top:10%;
+		padding-bottom:20em;
+		padding-right:45%;
+	}
+	.ltie9 &{
+		padding-left:1em;
+		padding-top:10%;
+		padding-bottom:20em;
+		padding-right:45%;
+	}
+}
+.banner_overlay_container{
+	position:absolute;
+	bottom:10%;
+	//background-color:red;
+	width:70%;
+}
+.banner_overlay_header{
+	color:#fff;
+	font-family: "HelveticaNeueLTStd-MdEx", Helvetica, Arial, sans-serif;
+	font-size:ms(0);
+	padding-left:0;
+	bottom:5%;
+	line-height:1.1em;
+	@include at-breakpoint(600px 12){
+		font-size:ms(1);
+
+	}
+	@include at-breakpoint(800px 12){
+		font-size:ms(2);
+		padding-left:16px;
+		padding-top:50px;
+	}
+	@include at-breakpoint(960px 12){
+		font-size:ms(3);
+		padding-left:32px;
+		letter-spacing:-1px;
+	}
+	@include at-breakpoint(1200px 12){
+		font-size:ms(4);
+		padding-top:50px;
+
+	}
+	.ltie9 &{
+		font-size:ms(3);
+		padding-left:32px;
+		letter-spacing:-1px;
+	}
+
+}
+.banner_overlay_subhead{
+	margin-top:1em;
+	font-size:ms(-1);
+	padding-left:0;
+	color:#ffffff;
+	line-height:1.1em;
+	@include at-breakpoint(600px 12){
+		line-height:1.25em;
+	}
+	@include at-breakpoint(800px 12){
+		font-size:ms(0);
+		padding-left:16px;
+	}
+	@include at-breakpoint(960px 12){
+		font-size:ms(1);
+		padding-left:32px;
+	}
+	@include at-breakpoint(1200px 12){
+		font-size:ms(2);
+	}
+	.ltie9 &{
+		line-height:1.25em;
+		font-size:ms(1);
+		padding-left:32px;
+	}
+
+}
+.banner_overlay_cta{
+
+	
+}
+
+// Children Sub classes
+
+
+
+// Children States
+
+
+

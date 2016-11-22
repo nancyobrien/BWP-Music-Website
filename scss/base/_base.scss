@@ -1,0 +1,40 @@
+// =============================================================================
+// Base classes
+// There should be no class names or ID's in this document
+// =============================================================================
+
+
+
+//This is required for IE in Metro view http://mattstow.com/responsive-design-in-ie10-on-windows-phone-8.html#the-fix
+@-ms-viewport{width: device-width; } 
+
+// Globally set box model to border-box
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+a{
+
+	@include transition(background-color 0.5s ease, color 0.5s ease);
+
+}
+a:hover{
+	text-decoration:none;
+	@include transition(background-color 0.5s ease, color 0.5s ease);
+	
+}
+
+.hide {
+	display: none;
+}
+
+table{
+	text-align:left;
+}
+//remove focus rectangle on links
+a:active, a:selected, a:visited, a:focus { 
+    border: none;
+    outline: none;
+}

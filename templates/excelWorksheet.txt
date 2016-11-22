@@ -1,0 +1,27 @@
+<Worksheet ss:Name="{locationName} Songs">
+  <Table x:FullColumns="1" x:FullRows="1" ss:DefaultColumnWidth="150" ss:DefaultRowHeight="15">
+   {HeaderRow}
+   {TitleRow}
+   {Rows}
+   <Row>
+    <Cell ss:Index="6" ss:MergeDown="2" ss:StyleID="ssPrimaryFieldPink"><Data ss:Type="String">New song Intro&#45;-Week 1</Data></Cell>
+    <Cell ss:MergeDown="2" ss:StyleID="ssPrimaryFieldBlue"><Data ss:Type="String">New Song Intro&#45;-Week 2</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Layout x:Orientation="Landscape"/>
+    <Header x:Margin="0"/>
+    <Footer x:Margin="0"/>
+    <PageMargins x:Bottom="0.25" x:Left="0.25" x:Right="0.25" x:Top="0.25"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <HorizontalResolution>1200</HorizontalResolution>
+    <VerticalResolution>1200</VerticalResolution>
+   </Print>
+
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>

@@ -1,0 +1,67 @@
+// MODULE SYNTAX
+// module: 		.module-name
+// child: 		.module-name_child
+// sub class: 	.module-name--subclass
+// state: 		.module-name--is-state
+
+// =============================================================================
+// Module
+// =============================================================================
+
+.banner-slider{
+	position:relative;
+	height:389px;
+	overflow: hidden;
+	@include at-breakpoint(800px 12){
+		height:0;
+		width:100%;
+		padding:47% 0 0 0;
+	}
+	.ltie9 &{
+		height:0;
+		width:100%;
+		padding:47% 0 0 0;
+	}
+}
+
+// Sub Classes
+
+
+
+// States
+
+
+
+// =============================================================================
+// Children (that are not separate modules)
+// =============================================================================
+
+.banner-slider_nav{
+	position:absolute;
+	z-index:9999;
+	width:100%;
+	bottom:0;
+	text-align:center;
+}
+.banner-slider_nav_item {
+	display:inline;
+	& > a{
+		display:inline-block;
+		font-size:ms(4);
+		color:rgba(#ffffff, 0.5);
+		text-decoration:none;
+		padding:8px 3px;
+
+		&:hover{
+			color: rgba(#ffffff, 0.75);
+			
+		}
+	}
+}
+
+.banner-slider_nav_item--is-selected > a{
+	color:#ffffff;
+}
+
+
+

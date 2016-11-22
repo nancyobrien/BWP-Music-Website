@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js ltie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="robots" content="noindex" />
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!--<link href="/icons/favicon.ico" type="image/x-icon" rel="shortcut icon"> -->
+	<link href="./css/main.css" type="text/css" rel="stylesheet">
+	<!--fix viewport issue on some windows 8 machines http://mattstow.com/responsive-design-in-ie10-on-windows-phone-8.html#the-fix-->
+	<script src="./scripts/viewport-fix.js"></script> 
+	<script src="./scripts/vendor/modernizr.min.js"></script> 
+	<title>BWP Music</title>
+	<script type='text/javascript'>
+	(function (d, t) {
+	  var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+	  bh.type = 'text/javascript';
+	  bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=lbeced0uhthksgpfvip53q';
+	  s.parentNode.insertBefore(bh, s);
+	  })(document, 'script');
+	</script>
+</head>
+
+<body class="main">
+	<div class="l-header"
+		<div class="header"> 
+			<div class="logo"></div>
+			<select class="location-select">
+				<option value="richland">Richland (Live)</option>
+				<option value="sundaypm">Richland (PM)</option>
+				<option value="gallery">Gallery</option>
+				<option value="pasco">West Pasco</option>
+				<option value="intersectAM">iNTERSECT AM</option>
+				<option value="intersectPM">iNTERSECT PM</option>
+			</select>
+			<a class="nav-icon" href="#"></a>
+			<ul class="nav">
+				<li class="nav_item js-nav-item selected" data-nav="songs"><a>Song Usage</a></li>
+				<li class="nav_item js-nav-item" data-nav="pickSongs"><a>Pick Songs</a></li>
+				<li class="nav_item "><a href="/API/CCLIExport.ashx">Export Data</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="l-modal-container">
+		<div class="modal-container">
+			<div class="modal-overlay">
+				<div class="modal">
+					<div class="modal-title"><span class="modal-title-input">Feedback!</span> <a class="modal-close-button modal-close icon-x" href="#"></a></div>
+					<div class="modal-content">
+						<form id="feedback-form">
+							<div class="message">
+								<p class="progress"><span class="loader-image"></span></p>
+								<p class="complete">Message sent <span class="icon-thumbs-up"></span></p>
+								<p class="custom"></p>
+								<p class="error"><span class="icon-thumbs-down"></span> There was an error saving your message.<br>Please try again later.</p>
+							</div>
+							<textarea id="feedback-form-content" placeholder="Your feedback"></textarea>
+							<input type="text" id="feedback-form-name" placeholder="Your name" >
+							<div class="buttons">
+								<a id="submit-feedback" class="button-submit" href="#"><span class="icon-chat-alt-stroke"></span> Send Feedback</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="l-content-container">
+	<!-- CONTENT ============================================ -->
+
+
+	<div class="content-container" id="tab-songs">
+		<div class="controls">
+			<label>Search by Title or Artist:</label> <input class="search-title" placeholder="Search" type="search" /><a class="clear-input" href='#'></a>
+			<div class="filters"><span class="title--filter">Filter by slot:</span> 
+				<a href="#" class="button--filter selected" data-filterslot="">Any slot</a>
+				<a href="#" class="button--filter" data-filterslot="1">Slot&nbsp;1</a>
+				<a href="#" class="button--filter" data-filterslot="2">Slot&nbsp;2</a>
+				<a href="#" class="button--filter" data-filterslot="3">Slot&nbsp;3</a>
+				<a href="#" class="button--filter" data-filterslot="4">Slot&nbsp;4</a>
+			</div>
+			<div class="config">
+				<input type="hidden" class="datepicker" id="startdatepicker">
+
+			</div>
+		</div>
+		<div id="songList"  class="data-table">
+			<div class="data-head">
+				<ul class="data-header-list drop-list" >
+					<li class="sort" data-sort="title"><a>Title <span class="subtitle">(CCLI #)</span></a></li>
+					<li class="sort" data-sort="artist"><a>Artist</a></li>
+					<li class="sort" data-sort="lastUsed"><a>Last Use (weeks)</a></li>
+					<li class="sort" data-sort="preferredSlot"><a>Most Common Slot</a></li> 
+					<li class="sort" data-sort="useCount"><a>Number of Times Played</a> <div class="timestamp">(since <span class="dataStartDate"></span>)</div></li>
+					<li class="no-sort voting">Vote</li>
+				</ul>
+				<ul id="data-titles" class="data-header" >
+				</ul>
+			</div>
+			<!-- IMPORTANT, class="list" have to be on container -->
+	    	<div id="songBody" class="data-content list">
+				<p class="loading">
+					<span>Loading songs</span><span class="loader-image"></span>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="content-container" id="tab-pickSongs">
+		<div class="controls">
+			<a href="#" id="rerandomize" class="button--randomize"><span class="icon-dice-single"></span> Select New Songs</a> 
+		</div>
+		<div id="randomList"  class="data-table random">
+			<div class="data-head">
+				<ul class="data-header nosort" >
+					<li class="no-sort"><a>Title</a></li>
+					<li class="no-sort"><a>Artist</a></li>
+					<li class="no-sort"><a>Last Use (weeks)</a></li>
+					<li class="no-sort"><a>Most Common Slot</a></li> 
+					<li class="no-sort"><a>Number of Times Played</a><div class="timestamp">(since <span class="dataStartDate"></span>)</div></li>
+				</ul>
+				<ul id="data-titles" class="data-header" >
+				</ul>
+			</div>
+			<!-- IMPORTANT, class="list" have to be on container -->
+	    	<div id="randomBody" class="data-content">
+				
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- END CONTENT  -->
+
+	</div>
+
+	<div class="l-footer">
+		<div class="footer">
+			<div class="footer_feedback"><a href="#" id="show-feedback"><span class="icon-chat-alt-stroke"></span> Send feedback</a></div>
+			<div class="footer_last-updated">Last updated on: <span id="lastUpdatedDate"></span></div>
+		</div>
+	</div>
+
+	<!-- <div class="tooltipster-base bwp-theme tooltipster-fade tooltipster-fade-show" style="transition-duration: 200ms; animation-duration: 200ms; top: 170px; left: 236px;"><div class="tooltipster-content"><ul><li class="tip-row"><span class="tip-date">01/10/2016</span><span class="tip-name">Colin Dale</span><span class="tip-key">[G]</span></li><li class="tip-row"><span class="tip-date">10/18/2015</span><span class="tip-name">Todd Billow</span><span class="tip-key">[G]</span></li><li class="tip-row"><span class="tip-date">09/27/2015</span><span class="tip-name">Vienna Gervais</span><span class="tip-key">[C]</span></li><li class="tip-row"><span class="tip-date">06/14/2015</span><span class="tip-name">Todd Billow</span><span class="tip-key">[G]</span></li><li class="tip-row"><span class="tip-date">04/26/2015</span><span class="tip-name">Todd Billow</span><span class="tip-key">[G]</span></li><li class="tip-row"><span class="tip-date">03/08/2015</span><span class="tip-name">Todd Billow</span><span class="tip-key">[G]</span></li><li class="tip-row"><span class="tip-date">02/01/2015</span><span class="tip-name">AJ O'Laughlin</span><span class="tip-key">[G]</span></li></ul></div><div class="tooltipster-arrow-right tooltipster-arrow" style=""><span class="tooltipster-arrow-border" style="margin-left: -1px; border-color: rgb(204, 204, 204);;"></span><span style="border-color:rgb(255, 255, 255);"></span></div></div> -->
+
+
+	<div class="mobile-tooltip">
+		<a class="icon-delete button-close" href="#"></a>
+		<h1 class="title">Song History</h1>
+		<div class="mobile-tooltip-content">
+			<ul><li class="tip-row"><span class="tip-date">01/10/2016</span><span class="tip-name">Colin Dale</span><span class="tip-key">[G]</span></li><li class="tip-row"><span class="tip-date">10/18/2015</span><span class="tip-name">Todd Billow</span><span class="tip-key">[G]</span></li><li class="tip-row"><span class="tip-date">09/27/2015</span><span class="tip-name">Vienna Gervais</span><span class="tip-key">[C]</span></li><li class="tip-row"><span class="tip-date">06/14/2015</span><span class="tip-name">Todd Billow</span><span class="tip-key">[G]</span></li><li class="tip-row"><span class="tip-date">04/26/2015</span><span class="tip-name">Todd Billow</span><span class="tip-key">[G]</span></li><li class="tip-row"><span class="tip-date">03/08/2015</span><span class="tip-name">Todd Billow</span><span class="tip-key">[G]</span></li><li class="tip-row"><span class="tip-date">02/01/2015</span><span class="tip-name">AJ O'Laughlin</span><span class="tip-key">[G]</span></li></ul>
+		</div>
+	</div>
+
+	<!-- SCRIPTS ============================================ -->
+
+	<script src="./scripts/vendor/jquery-1.11.1.min.js"></script>
+	<script src="./scripts/vendor/jquery.observehashchange.js"></script>
+	<script src="./scripts/vendor/mustache.min.js"></script>
+	<script src="./scripts/vendor/zebra_datepicker.min.js"></script>	
+	<script src="./scripts/vendor/list.min.js"></script>
+	<script src="./scripts/vendor/jquery.tooltipster.min.js"></script>
+	<script src="./scripts/scripts.js"></script>
+
+	<!-- END SCRIPTS  -->
+
+
+
+</body>
+</html>

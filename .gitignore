@@ -45,3 +45,24 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#config files with pwds and stuff
+sftp-config.json
+Web.config 
+
+#cache files
+.sass-cache
+.sass-cache/*
+
+
+Bin/StepframeModules.dll.refresh
+*.bak
+App_Data/Database.mdf
+App_Data/Database_log.ldf
+*.refresh
+BWP Music Site.sublime-project
+BWP Music Site.sublime-workspace
+scripts/tooltipster-master
+scripts/tooltipster-master/*
+export/xmlExport - Copy.xml
+data/sample/*

@@ -1,0 +1,112 @@
+// MODULE SYNTAX
+// module: 		.module-name
+// child: 		.module-name_child
+// sub class: 	.module-name--subclass
+// state: 		.module-name--is-state
+
+// =============================================================================
+// Module
+// =============================================================================
+
+.logo{
+	//position:absolute;
+  display: inline-block;
+  z-index:800;
+	top:0;
+	height:$mobile-header-height;
+	//width:9.5em;
+	padding:0;
+	margin-left:1em;
+  background: url("http://bethel-church.org/wp-content/uploads/2013/11/logonew.png") no-repeat;
+  background-size: contain;
+  width:10em;
+
+  @include at-breakpoint(800px 12){
+    height:$header-height;
+    position:absolute;
+  }
+}
+
+// Sub Classes
+
+.logo_image{
+	position:absolute;
+	display:block;
+	z-index:900;
+	background-image: url(/images/logo.png);
+  	background-image: url(/images/logo.svg), none;
+  	background-repeat:no-repeat;
+  	background-size:117px 56px;
+  	width:100%;
+  	height:3.5em;
+  	bottom:15px;
+  	left:40px;
+  	@include at-breakpoint(800px 12) {
+  		background-size:117px 56px;
+  		width:117px;
+  		height:3.5em;
+  		bottom:22px;
+  		left:45px;
+
+  	}
+  	@include at-breakpoint(960px 12) {
+      	background-size:134px 64px;
+  		width:134px;
+  		height:3.8em;
+  		bottom:20px;
+  		left:50px;
+    }
+    @include at-breakpoint(1200px 12) {
+      	background-size:168px 80px;
+  		width:168px;
+  		height:4em;
+  		bottom:30px;
+  		left:55px;
+    }
+    .ltie9 &{
+      background-image:none;
+      background-size:134px 64px;
+      width:134px;
+      height:64px;
+      bottom:30px;
+      left:50px;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+      src='/images/logo.png',
+      sizingMethod='scale');
+    }
+  	
+
+  }
+// States
+
+
+.location-select {
+  position: absolute;
+  top: .7rem;
+  right: 3.5rem;
+  padding: .25rem 1rem .25rem .5rem;
+  font-size: 0.9rem;
+  //text-transform: uppercase;
+  border: 1px solid $color-secondary;
+  color: $color-primary;
+
+  @include at-breakpoint(400px 12) {
+    font-size: 1rem;
+    padding: .5rem 1rem .5rem .5rem;
+
+  }
+  @include at-breakpoint(800px 12) {
+    right: 0.5rem;
+    top: 2rem;
+  }
+  @include at-breakpoint(1600px 12) {
+    right: 0;
+  }
+
+  option {
+    color: $text-color;
+  }
+  &:focus {
+    outline: $color-secondary auto 5px;
+  }
+}

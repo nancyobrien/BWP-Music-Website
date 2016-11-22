@@ -1,0 +1,216 @@
+// =============================================================================
+// Sidebar Box
+// =============================================================================
+
+.sidebar-box{
+	background-color:$color-alt1;
+	&:before{
+		content: "";
+		display:block;
+		height: 12px;
+		background-color:rgba(white, 0.5);;
+	}
+	&:after{
+		content: "";
+		display:table;
+	}
+	a{	display:inline-block;
+		text-decoration:none;
+		&:hover{
+			text-decoration:underline;
+		}
+	}
+	strong{font-family:$heading-font-family;}
+	
+}
+.sidebar-box_URL{
+	
+	display:inline-block;
+	padding: 3px 5px;
+	background-color:rgba(black, .15);
+	@include border-radius(5px);
+	border:1px solid rgba(black, .15);
+	border-top-color:transparent;
+	border-left-color:transparent;
+	&:hover{
+		background-color:rgba(black, .1);
+	}
+}
+
+// Sub Classes
+.sidebar-box--i-want-to{
+	color:$color-alt1;
+	a{
+		color:$color-alt1;
+	}
+}
+.sidebar-box--quicklinks{
+	background-color:$color-alt2;
+	color:$color-alt2;
+	a{
+		color:$color-alt2;
+	}
+}
+
+.sidebar-box--health-focus{
+	background-color:$color-primary;
+	color:$color-primary;
+	.sidebar-box_title{
+		font-family:$base-font-family;
+	}
+	a{
+		color:$color-alt1;
+		font-family:$heading-font-family;
+	}
+	strong{
+		font-family:$heading-font-family;
+	}
+}
+.sidebar-box--food{
+	background-color:$color-alt4;
+	color:$color-alt4;
+	a{
+		color:$color-alt4;
+	}
+}
+.sidebar-box--mind-body{
+	background-color:$color-alt3;
+	color:$color-alt3;
+	a{
+		color:$color-alt3;
+	}
+}
+.sidebar-box--healthcare{
+	background-color:$color-alt1;
+	color:$color-alt1;
+	a{
+		color:$color-alt1;
+	}
+}
+.sidebar-box--money{
+	background-color:$color-alt2;
+	color:$color-alt2;
+	a{
+		color:$color-alt2;
+	}
+}
+.sidebar-box--my-location{
+	background-color:$color-primary;
+	color:$color-primary;
+	a{
+		color:$color-primary;
+	}
+}
+// States
+
+
+
+// =============================================================================
+// Children (that are not separate modules)
+// =============================================================================
+
+.sidebar-box_content{
+	background-color:rgba(white, 0.8);
+	padding:1em 2em 1em 5em;
+	margin: 12px 0 0px;
+	position:relative;
+	@include at-breakpoint(800px 12){
+		
+	}
+}
+
+.sidebar-box--i-want-to .sidebar-box_content{
+		background-color:#d8eff0;
+	}
+.sidebar-box--quicklinks .sidebar-box_content{
+		background-color:#eaf4d7;
+	}
+.sidebar-box--health-focus .sidebar-box_content{
+		background-color:#d7dbe7;
+	}
+
+
+.sidebar-box_icon{
+	position:absolute;
+	width:48px;
+	height:48px;
+	@include rem-fallback(left, 1);
+	@include rem-fallback(top, 2);
+	font-size:48px;
+}
+.sidebar-box_title{
+	text-transform:uppercase;
+	font-family:$heading-font-family;
+	margin-top:1em;
+}
+.sidebar-box_title--healthfocus{
+	text-transform:none;
+}
+
+.sidebar-box_list{
+	font-size:ms(-1);
+	margin:.5em 0;
+	line-height:1.25em;
+	& > li{
+		margin:.4em 0;
+	}
+	@include at-breakpoint(960px 12){
+		font-size:.85em;
+		margin:1em 0;
+		& > li{
+			margin:.4em 0;
+		}
+	}
+	@include at-breakpoint(1200px 12){
+		font-size:.95em;
+	}
+	.ltie9 &{
+		font-size:.85em;
+		margin:1em 0;
+		& > li{
+			margin:.4em 0;
+		}
+	}
+}
+.sidebar-box_ordered-list{
+	list-style:decimal;
+	font-size:ms(-1);
+	line-height:1.25em;
+	padding-left:1em;
+	margin-left:0.5em;
+		@include at-breakpoint(960px 12){
+		font-size:.95em;
+		margin:1em 0;
+		margin-left:.5em;
+		& > li{
+			margin:.4em 0;
+		}
+	}
+}
+.sidebar-box_paragraph{
+	font-size:ms(-1);
+	margin:.5em 0;
+	line-height:1.25em;
+	@include at-breakpoint(800px 12){
+		font-size:.75em;
+	}
+	@include at-breakpoint(960px 12){
+		font-size:.85em;
+		margin:1em 0;
+	}
+	@include at-breakpoint(1200px 12){
+		font-size:.95em;
+	}
+	.ltie9 &{
+		font-size:.85em;
+		margin:1em 0;
+	}
+}
+
+// Children Sub classes
+
+
+
+// Children States
+
+

@@ -1,0 +1,91 @@
+table {
+	width: 100%;
+	thead {
+
+		tr {
+			background-color: $color-primary;
+		}
+
+		th {
+			cursor: pointer;
+			padding: 1.5em;
+			font-weight: bold;
+			color: #fff;
+
+
+			a {
+				width: 100%;
+				height: 100%;
+				display: inline-block;
+
+				&:after {
+					width: 1em;
+					display: inline-block;
+					margin-left: .25em;
+					font-family: 'icomoon';
+					content: "\f05f";
+					color: darken($color-primary, 15);
+				}
+
+				&.sort-up {
+					&:after {
+						margin-left: .25em;
+						font-family: 'icomoon';
+						content: "\f0a2";
+						color: #fff;
+					}
+				}
+
+				&.sort-down {
+					&:after {
+						margin-left: .25em;
+						font-family: 'icomoon';
+						content: "\f0a3";
+						color: #fff;
+					}
+				}
+			}
+
+		}
+	}
+
+	tr {
+		&:nth-child(even) {background: #eee}
+		/* &.expanded {
+			td {
+				&:nth-child(1) { 
+					&:before {
+						content: "\f09b";
+					}
+				}
+			}
+		} */
+	}
+
+	td {
+		position: relative;
+		padding: 1.5em;
+		&:nth-child(1) { 
+			cursor: pointer;
+			font-weight: bold;
+			font-size: 1.1;
+			/* &:before {
+				margin-right: .25em;
+				font-family: 'icomoon';
+				content: "\f09a";
+			} */
+
+		}
+		&.voting {
+			font-family: 'icomoon';
+			&:before {
+				content: "\e900";
+			}
+			&:after {
+				margin-right: .25em;
+				content: "\e901";
+			}
+
+		}
+	}
+}

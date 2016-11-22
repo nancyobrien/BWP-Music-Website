@@ -1,0 +1,129 @@
+// =============================================================================
+// Content
+// =============================================================================
+
+.content{
+	padding:2em 2em 5em 2em;
+	@include at-breakpoint(800px 12) {
+		padding:2em 5em 5em 2em;
+	}
+
+	.sub--main &{
+		padding:2em 2em 5em 2em;
+	}
+	.food & a{
+		color:$color-alt4;
+	}
+	.mind-body & a{
+		color:$color-alt3;
+	}
+	.healthcare & a{
+		color:$color-alt1;
+	}
+	.money & a{
+		color:$color-alt2;
+	}
+	.my-location & a{
+		color:$color-primary;
+		&.button{
+			color:white;
+			margin-left:0;
+		}
+
+	}
+	.sub & {
+		hgroup{
+			h1{
+				font-size:ms(3);
+				padding-top:1em;
+			}
+			h2{
+				margin-top:0;
+				font-size:ms(2);
+				font-family: 'HelveticaNeueLTStd-It', Helvetica, Arial, sans-serif;
+				color:#AAA;
+			}
+		}
+	}
+
+}
+
+// Sub Classes
+
+
+
+// States
+
+
+// =============================================================================
+// Children (that are not separate modules)
+// =============================================================================
+.content_sources{
+	border:1px solid #ccc;
+	padding:2em;
+	font-size:85%;
+	line-height:1.3em;
+	margin-top:4em;
+	& > h3{
+		margin-top:0;padding-top:0;
+	}
+}
+.content_callout{
+	clear:both;
+	border:8px solid #ccc;
+	padding:2em;
+	margin-top:2em;
+	& > h3{
+		margin-top:0;padding-top:0;
+	}
+	.food &{
+		border-color:$color-alt4;
+		& > h3{
+			color:$color-alt4;
+		}
+	}
+	.mind-body &{
+		border-color:$color-alt3;
+		& > h3{
+			color:$color-alt3;
+		}
+	}
+	.healthcare &{
+		border-color:$color-alt1;
+		& > h3{
+			color:$color-alt1;
+		}
+	}
+	.money &{
+		border-color:$color-alt2;
+		& > h3{
+			color:$color-alt2;
+		}
+	}
+	.my-location &{
+		border-color:$color-primary;
+		& > h3{
+			color:$color-primary;
+		}
+
+	}
+	li &{
+		margin-top:.5em;
+		border-width:4px;
+		padding:1em 2em 0em .5em;
+		margin-bottom:2em;
+		margin-right:2em;
+		border-color:#aaa !important;
+		h3{
+			font-size:ms(1);
+		}
+	}
+
+}
+
+// Children Sub classes
+
+// Children States
+
+
+

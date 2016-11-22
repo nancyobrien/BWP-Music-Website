@@ -1,0 +1,20 @@
+// =============================================================================
+// Image
+// =============================================================================
+
+.image--left{
+	float:left;
+	margin-right:1em;
+	margin-bottom:1em;
+}
+.image--right{
+	float:right;
+	margin-left:1em;
+	margin-bottom:1em;
+}
+.image--block{
+	float:none;
+	margin-left:0;
+	margin-right:0;
+	margin-bottom:1em;
+}

@@ -1,0 +1,65 @@
+// =============================================================================
+// Breadcrumb
+// =============================================================================
+
+.breadcrumb{
+	padding: 2em 2em 0 1em;
+	float:left;
+	font-size:1em;
+
+	@include at-breakpoint (800px 12){
+		padding-left:2em;
+
+	}
+	
+	@include at-breakpoint (960px 12){
+		
+	}
+	.ltie9 &{
+		padding-left:1.5em;
+		padding-top:1em;
+
+	}
+
+
+}
+
+// Sub Classes
+
+
+
+// States
+
+
+
+// =============================================================================
+// Children (that are not separate modules)
+// =============================================================================
+
+.breadcrumb_item{
+	float:left;
+	& > a{
+		color:$color-alt1;
+		display:inline-block;
+		text-decoration:none;
+		padding:.1em .6em;
+		@include border-radius(3px);
+		background-color:#fff;
+		&:hover{
+			background-color:$color-subtle;
+			color:$color-alt1;
+		}
+	}
+}
+
+.breadcrumb_divider{
+	margin:0 .25em;
+}
+// Children Sub classes
+
+
+
+// Children States
+
+
+

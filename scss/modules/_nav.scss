@@ -1,0 +1,249 @@
+// =============================================================================
+// nav
+// =============================================================================
+
+.nav-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: .65em .25em;
+    cursor: pointer;
+    font-size: 2em;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+    color: $color-primary;
+	&:before {
+		font-family: 'icomoon';
+		content: "\e911";
+	}
+
+	.nav-open & {
+		background-color: $color-subtle;
+	}
+
+	@include at-breakpoint(800px 12) {
+		display: none;
+	}
+}
+
+.nav{
+	display: none;
+
+	.nav-open & {
+		display: block;
+	}
+
+
+	@include clearfix();
+	position:relative;
+	margin-left: 0;
+	z-index:700;
+	min-height:41px;
+	background-color: $color-subtle;
+	//position:absolute;
+	width:auto;
+	padding:1em;
+
+
+	@include at-breakpoint(800px 12) {
+		background-color:transparent;
+		padding:0;
+		position:relative;
+		width:auto;
+		height: 7em;
+		bottom:0;
+		top:-2em;
+		margin-left: 11em;
+		padding:2em;
+		padding-top: 4em;
+		display: inline-block;
+		&.open {
+			display: inline-block;
+		}
+	}
+	.ltie9 &{
+		padding:1em;		
+		position:absolute;
+		width:auto;
+		padding:0;
+		background-color:transparent;
+		position:relative;
+		width:auto;
+		top:0;
+	}
+
+}
+
+
+// =============================================================================
+// Children (that are not separate modules)
+// =============================================================================
+
+.nav_item{
+	//display:none;
+	text-transform:uppercase;
+	cursor: pointer;
+
+
+	font-family:$heading-font-family;
+	font-weight: bold;
+	color:#666;
+
+	a {
+		color:#666;
+	}
+
+	&:hover {
+		& > a{
+			border-bottom: 2px solid #ccc;
+		}
+	}
+
+	&.selected {
+		background: $color-primary;
+		color: white;
+
+		a {
+			color: white;
+		}
+
+		@include at-breakpoint(800px 12) {
+			color:#666;
+			background: transparent;
+			a {
+			color: #666;
+		}
+		}
+
+		& > a{
+			border-bottom: 2px solid $color-primary;
+		}
+	}
+
+	& > a{
+		display:block;	
+		font-size:12px;
+		width:auto;
+		
+		display:block;
+		
+		text-decoration:none;
+		padding:.5em 1em;
+		border-bottom: 2px solid transparent;
+		margin: 0 .25em;
+		width: 100%;
+
+
+		@include at-breakpoint(800px 12) {
+			border-bottom: 2px solid #fff;
+			width:150px;
+		}
+		.ltie9 {
+			border-bottom: 2px solid #fff;
+			width:150px;
+		}
+	}
+
+	@include at-breakpoint(800px 12) {
+		&:first-child{
+			background-image:none;
+		}
+		width:auto;
+		height: auto;
+		display: table-cell;
+		vertical-align: bottom;
+		white-space: nowrap;
+
+		& > a{
+			width:auto;
+			text-align:center;
+			//margin:1em 0;
+			padding:.5em 0.5em;
+			font-size:17px;
+
+			/* &:hover{
+				background-color:rgba(#ffffff, 0.15);
+
+			} */
+
+		}
+	}
+	@include at-breakpoint(900px 12) {
+
+		& > a{
+
+			padding:.5em 1.5em;
+
+		}
+	}
+
+
+	.ltie9 &{
+		float:left;
+		background: transparent url("/images/nav-divider.png") 0 50% no-repeat;
+		&:first-child{
+			background-image:none;
+		}
+		width:20%;
+		padding-right:1%;
+		padding-left:1%;
+		font-size:14px;
+		& > a{
+			width:auto;
+			text-align:center;
+			margin:1em 0;
+			padding:.5em .5em;
+			@include border-radius($border-radius-medium);
+			&:hover{
+				background-color:#59bbc1;
+			}
+		}
+	}
+}
+
+.nav_plus{
+	font-size:ms(1);
+	
+}
+
+.nav_button {
+	@include transition(background-color 0.5s ease );
+	margin-top:0;
+	display:block;
+	position:absolute;
+	padding:14px 18px;
+	right:16px;
+	margin-right:-16px;
+	margin-top:-8px;
+	cursor:pointer;
+	
+	@include at-breakpoint(800px 12){
+		display:none;
+	}
+ 	.ltie9 &{display:none;}
+	span{
+		display:block;
+		margin:5px 0px 5px 0px;
+		height:3px;
+		background:#fff;
+		width:25px;
+	}
+	&:hover, &.active{
+		background-color: $color-primary;
+	}
+}
+	/*.icon--close{
+		display:none;
+		font-size:1.5em;
+		margin-top:7px;
+		margin-left:2px;
+		color:$color-primary;
+	}
+}*/
+.nav_button--is-open{
+	background-color:lighten($color-alt1,5%);
+	@include transition(background-color 0.5s ease );
+	
+}
+

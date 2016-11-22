@@ -1,0 +1,71 @@
+// =============================================================================
+// Footer
+// =============================================================================
+
+.footer{
+	color:#919191;
+	padding:1em;
+	font-size:ms(-1);
+	border-top:1px solid $color-subtle;
+	
+}
+
+// Sub Classes
+
+
+
+// States
+
+
+// =============================================================================
+// Children (that are not separate modules)
+// =============================================================================
+
+.footer_last-updated {
+	text-align:center;
+	font-style: italic;
+	display: none;
+
+	@include at-breakpoint(800px 12) {
+		margin:2.75em 1em;
+	}
+	.ltie9 &{
+		margin:2.75em 1em;
+	}
+	
+
+}
+
+.footer_feedback {
+	font-style: italic;
+	text-align:center;
+	
+	font-size: 1em;
+	margin-bottom: .5em;
+
+
+	a {
+		color: $color-primary;
+		text-decoration: none;
+		padding: .5em 1em;
+		border: thin dotted $color-primary;
+		&:hover {
+			background-color: $color-subtle;
+		}
+	}
+
+	@include at-breakpoint(800px 12) {
+		text-align:left;
+		position: absolute;
+		margin:2.75em 2em;
+	}
+	.ltie9 &{
+		margin:2.75em 1em;
+	}
+	
+
+}
+
+
+
+

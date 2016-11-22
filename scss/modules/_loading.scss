@@ -1,0 +1,27 @@
+.loading {
+	span {
+		line-height: 3em;
+		vertical-align: top;
+		font-size: 126%;
+		margin-left: 1em;
+	}	
+	.loader-image {
+		width: 4em;
+		height: 3em;
+	}
+
+	@include at-breakpoint(800px 12) {
+		min-width: 600px;
+	}
+}
+
+
+.loader-image {
+	display: inline-block;
+	width: 2.5em;
+	height: 0.7em;
+	background-position: 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: inline-image("ellipsis.gif");
+}

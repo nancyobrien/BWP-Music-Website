@@ -1,0 +1,169 @@
+
+.l-modal-container {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+	z-index: 10000;
+
+}
+
+.modal-overlay {
+	background-color: rgba(00, 00, 00, .7);
+	z-index: 10000;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 1;
+
+	.show-modal & {
+		.modal {
+			opacity: 1;
+		}
+	}
+
+	.modal {
+		//@include transition(opacity 0.1s linear);
+		opacity: 1;
+		position: relative;
+		top: 6em;
+		margin: 0 auto;
+		max-width: 85%;
+		background-color: #fff;
+		min-height: 10em;
+		height: auto;
+		border: thin solid $color-primary;
+		@include border-radius(5px);
+
+		@include at-breakpoint(800px 12) {
+			max-width: 50%;
+		}
+
+		.modal-title {
+			padding: .25em .5em;
+			background-color: $color-primary;
+			color: #fff;
+			font-weight: bold;
+			line-height: 2em;
+
+
+			.modal-close-button {
+				float: right;
+				line-height: 2em;
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+
+		.modal-content {
+			padding: 1em 1em 2em 1em;
+			position: relative;
+			form {
+				width: 100%;
+				margin: 0 auto;
+				padding: 1em;
+
+				input, textarea {
+					display: block;
+					width: 100%;
+					margin-bottom: .5em;
+					border: thin dotted $color-primary;
+					padding: .5em;
+					@include border-radius(3px);
+					&:focus {
+						outline: none !important;
+						border: thin solid $color-primary;
+					}
+				}
+
+				textarea {
+					min-height: 6em;
+
+				}
+
+				.message {
+					display:none;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					background: white;
+					text-align: center;
+					padding-top: 2em;
+					font-size: 3rem;
+
+					p {
+						max-width: 80%;
+						margin: 0 auto;
+						display: none;
+						font-size: 1.6rem;
+						line-height: 2rem;
+						&.error {
+							font-size: 1.5rem;
+							line-height: 2rem;
+						}
+
+						[class^="icon-"], [class*=" icon-"] {
+							font-size: 150%;
+							position: relative;
+							top: 8px;
+							color: $color-primary;
+						}
+					}
+
+
+					&.progress  {
+						display: block;
+						p.progress {
+							display: block;
+						}
+					}
+					&.complete  {
+						display: block;
+						p.complete {
+							display: block;
+						}
+					}
+					&.error  {
+						display: block;
+						p.error {
+							display: block;
+						}
+					}
+					&.custom  {
+						display: block;
+						p.custom {
+							display: block;
+						}
+					}
+
+				}
+
+				.buttons {
+					margin-top: 1em;
+					text-align: right;
+				}
+				.button-submit {
+					background-color: $color-primary;
+					color: $color-subtle;
+					text-decoration: none;
+					padding: .5em 1em;
+					border: thin solid $color-primary;
+
+					&:hover {
+						color: white;
+						border: thin dotted white;
+					}
+
+				}
+			}			
+		}
+
+	}
+}
+

@@ -1,0 +1,248 @@
+// MODULE SYNTAX
+// module: 		.module-name
+// child: 		.module-name_child
+// sub class: 	.module-name--subclass
+// state: 		.module-name--is-state
+
+// =============================================================================
+// Module
+// =============================================================================
+
+.story-thumb{
+	position:relative;		//trick to create an aspect ratio for image. Height is set by padding as a % below
+	overflow: hidden;		//(continued)
+	height:0;				//(continued)
+	width:100%;				//set width to fill container element
+	margin-bottom:1.40845%;	//set ottom margin equal to gutter between spaces.
+
+}
+
+// Sub Classes
+
+.story-thumb--large{
+	padding:80% 0 0 0; // sets the aspect ratio of the thumbnail
+	@include at-breakpoint(400px 12){
+		padding:60% 0 0 0;
+	}
+	@include at-breakpoint(960px 12){
+		padding:40% 0 0 0;
+	}
+	.ltie9 &{
+		padding:40% 0 0 0;
+	}
+
+}
+.story-thumb--medium{
+	padding:80% 0 0 0; // sets the aspect ratio of the thumbnail
+	@include at-breakpoint(400px 12){
+		padding:60% 0 0 0;
+	}
+	.ltie9 &{
+		padding:60% 0 0 0;
+	}
+}
+.story-thumb--small{
+	padding:80% 0 0 0; // sets the aspect ratio of the thumbnail
+}
+// States
+
+
+// =============================================================================
+// Children (that are not separate modules)
+// =============================================================================
+
+.story-thumb_grid{
+	width:100%;
+	float:left;
+	display:block;
+	clear:both;
+}
+// Children Sub classes
+.story-thumb_image{
+	position: absolute;
+	display: block;
+	margin:0 auto;
+	top: -100%;
+	bottom: -100%;
+	margin: auto;
+	max-width:100%;
+
+}
+.story-thumb_link{
+	display:block;
+	width:100%;
+	font-size:ms(-1);
+	line-height:1.5em;
+	text-decoration:none;
+	color:$text-color;
+	@include at-breakpoint(400px 12){
+		top:0;
+		position:absolute;
+		padding:82% .5em 0 .75em;
+	}
+	&:hover{
+		@include transition(background-color 0.5s ease, color 0.5s ease);
+		cursor:pointer;
+		background-color:rgba(#fff, 0.3);
+	}
+	.ltie9 &{
+		top:0;
+		position:absolute;
+		padding:82% .5em 0 .75em;
+	}
+}
+
+.story-thumb_title{
+	
+	
+	font-size:1.4em;
+	line-height:1.25em;
+	//font-family: "HelveticaNeueLTStd-Hv";
+	display:block;
+	margin:.5em 0;
+		padding-right:15%;
+	.food &{
+		color:darken($color-alt4, 10%);
+	}
+	.mind-body &{
+		color:darken($color-alt3, 10%);
+	}
+	.healthcare &{
+		color:darken($color-alt1, 10%);
+	}
+	.money &{
+		color:darken($color-alt2, 10%);
+	}
+	.my-location &{
+		color:darken($color-primary, 10%);
+
+	}
+}
+
+.story-thumb_description{
+	display:block;
+		padding-right:15%;
+		color:#333 !important;
+
+
+}
+
+.l-story-thumb_link{
+	position:relative;
+	margin-bottom:.5em;
+	padding-bottom:1em;
+	@include transition(background-color 0.5s ease, color 0.5s ease);
+}
+
+.story-thumb_link--large{
+		padding:0 0 0 0;
+		position:absolute;
+		bottom:0;
+		top:0;
+		background: transparent url(/images/banner-text-overlay-bottom.png) 0 0 no-repeat;
+		background-size:150% 100%;	
+		background-position:0 100%;
+		& > .story-thumb_title{
+			padding-right:10%;
+			position:absolute;
+			left:2%;
+			display:block;
+			bottom:0;
+			color:#fff;
+			font-size:ms(1);
+			font-family:'HelveticaNeueLTStd-Roman', Helvetica, Arial, sans-serif;
+
+			.story-thumb_description{
+				display:block;
+				padding-top:0;
+				line-height:1.1em;
+				font-size:ms(-1);
+				color:#fff !important;
+				font-family:'HelveticaNeueLTStd-Roman', Helvetica, Arial, sans-serif;
+			}
+		}
+		@include at-breakpoint (400px 12){
+			& > .story-thumb_title{
+				font-size: ms(2);
+				.story-thumb_description{
+					font-size:ms(-1);
+					padding-top:1em;
+				}
+			}
+		}
+		@include at-breakpoint (800px 12){
+			& > .story-thumb_title{
+				font-size: ms(3);
+				line-height:1.1em;
+				.story-thumb_description{
+					font-size:ms(-1);
+
+				}
+			}
+		}
+		@include at-breakpoint (960px 12){
+			& > .story-thumb_title{
+					font-size: ms(3);
+				.story-thumb_description{
+					font-size:ms(-2);
+				}
+			}
+		}
+		@include at-breakpoint (1200px 12){
+			& > .story-thumb_title{
+				font-size: ms(4);
+				.story-thumb_description{
+					font-size:ms(-2);
+				}
+			}
+		}
+		.ltie9 & {
+		padding-top:0;
+
+		background: transparent url(/images/banner-text-overlay-bottom-ie9.png) 0 0 no-repeat;
+			
+			& > .story-thumb_title{
+					font-size: ms(3);
+					line-height:1.1em;
+				.story-thumb_description{
+					font-size:ms(-2);
+					padding-top:1em;
+				}
+			}
+
+		}
+
+}
+
+.l-story-thumb_link--large{
+	 padding-bottom:0;
+}
+
+.l-story-thumb--small{
+	position:relative;
+	display:block;
+
+	@include at-breakpoint (400px 12){
+		@include span-columns(6, 12);
+		
+		&:nth-child(2n) { @include omega;} 
+	}
+	
+	@include at-breakpoint(960px 12){
+		 @include span-columns(4, 12);
+		 &:nth-child(2n) { @include remove-omega; } 
+		 &:nth-child(3n) { @include omega; }
+	}
+	.ltie9 &{
+		@include span-columns(4, 12);
+		 &:first-child + .l-story-thumb--small + .l-story-thumb--small, 
+		  &:first-child + .l-story-thumb--small + .l-story-thumb--small + .l-story-thumb--small + .l-story-thumb--small + .l-story-thumb--small,
+		   &:first-child + .l-story-thumb--small + .l-story-thumb--small + .l-story-thumb--small + .l-story-thumb--small + .l-story-thumb--small + .l-story-thumb--small + .l-story-thumb--small + .l-story-thumb--small 
+
+		 { @include omega; }
+	}
+}
+
+// Children States
+
+
